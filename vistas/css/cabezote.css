@@ -1,0 +1,418 @@
+/*=============================================
+TOP
+=============================================*/
+
+ 
+ .barraSuperior   .t{
+ 	
+ 	margin-left: -20px;
+
+ }
+
+
+#top ul li{
+	display:inline;
+	line-height:30px;
+	margin:0px 5px;
+	color:white;
+	border: 1px solid  transparent;
+	padding: 7px;
+	font-size: 12px;
+
+}
+
+#top ul li:hover{
+
+	border: 1px solid  rgba(255, 255,255, .4);
+
+}
+
+
+.barraSuperior .btn-departamentos{
+	border-radius: 3px;
+	
+	align-items: flex-end;
+	border: 1px solid  transparent;
+	font-size: 12px;
+	cursor: default;
+	width: 110px;	
+	
+}
+
+.barraSuperior .btn-departamentos i{
+	margin-left: 20px;
+	position: relative;
+	bottom: 2px;
+	right: 12px;
+	
+
+}
+
+.registro ul{
+	text-align: right;
+}
+
+
+.contenedor{
+	position: relative;
+	width: 950px;
+}
+
+ .grid{
+	z-index: 1000;
+	position: absolute;
+	display: none;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 1fr;
+	grid-template-areas: "categorias subcategorias  subcategorias ";
+	width: 935px;
+	height: 450px;
+
+
+}
+
+.grid.activo{
+	display: grid;
+}
+
+.grid::before{
+	content: "";
+	display: block;
+	background: transparent;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #fff;
+	position: absolute;
+	top: -5px;
+	left: 50px;
+}
+
+.grid > div{
+	background: #fff;
+	box-shadow: 0px 3px 6px rgba(0, 0,0, .10);
+}
+
+.grid .categoria a{
+	font-size: 14px;
+
+	display: flex;
+	
+	
+	justify-content: space-between;
+	padding: 10px 20px;
+
+
+
+
+}
+
+.grid .categoria a:hover{
+	box-shadow: 0px 3px 6px rgba(0, 0,0, .10);
+	font-weight: bold;
+}
+
+
+.grid .categoria h3{
+	margin-left: 25%;
+	display: none;
+}
+
+
+.grid .categoria a i{
+	display: none;
+	
+	position: relative;
+	bottom: -5px;
+	margin-left: 25px;
+}
+
+.grid .categoria a:hover i{
+	display: inline-block;
+}
+
+.grid a{
+	color: black;
+}
+
+
+
+
+.grid .contenedor-subcategorias{
+	
+	grid-area: subcategorias;
+}
+
+
+.grid .subcategoria{
+	display: none;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	height: 100px;
+}
+
+.grid .subcategoria.activo{
+	display: grid;
+}
+
+.grid .enlaces-subcategoria a{
+
+	display: block;
+	font-size: 14px;
+	padding: 10px 20px;
+
+}
+
+.grid .enlaces-subcategoria a:hover{
+	color: #E47911;
+}
+
+.grid .subtitulo{
+	font-size: 18px;
+	font-weight: bold;
+	color: #E47911;
+	padding: 5px;
+
+	margin-left: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+/*=============================================
+HEADER
+=============================================*/
+
+
+header .social ul{
+	display: flex;
+	margin-top: 20px;
+	
+}
+
+
+header ul li{
+	
+
+	display:inline;
+	line-height:30px;
+	margin:0px 15px;
+	color:white;
+	
+
+	
+	
+	
+
+}
+
+
+
+header .social ul li a i{
+
+	font-size: 20px;
+	margin:0 1px;
+
+
+}
+
+header ul{
+	margin-top: 15px;
+	padding-top:8px;
+
+}
+
+
+
+
+
+
+
+
+
+
+header #logotipo p
+{
+
+	margin-top: 10px;
+	padding: 25px 60px;
+	padding-left: 0px;
+	font-size:  18px;
+
+} 
+
+header #btnCategorias{
+	margin:20px 0;
+}
+
+header #btnCategorias p{
+	line-height:40px;
+	margin-bottom:0px;
+}
+
+header #btnCategorias p span{
+	cursor: pointer;
+}
+
+header #buscador{
+	margin:20px 0;
+}
+
+header #buscador input{
+	padding:19px;
+	border-radius:0;
+}
+
+header #buscador button{
+	padding:9px;
+	border:1px solid silver;
+	border-radius:0;
+}
+
+
+header #carrito{
+	margin:20px 0;
+}
+
+header #carrito button{
+	padding:9px 15px;
+	border:1px solid silver;
+	border-radius:0;
+}
+
+header #carrito p{
+	padding:2px;
+	padding-left:60px;
+	border:1px solid #aaa;
+	font-size:12px;
+}
+
+ #top #categorias{
+	
+	margin-top:-10px;
+	position: relative;
+	padding-bottom:20px;
+
+}
+
+#top #categorias h4{
+	margin-top:20px;
+	margin-bottom:-10px;
+}
+
+#top #categorias hr{
+	border:1px solid rgba(255,255,255,.3);
+}
+
+/*=============================================
+ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
+=============================================*/
+
+@media (min-width:1200px){
+
+	/*=============================================
+	HEADER
+	=============================================*/
+
+	header #logotipo p{
+		padding:20px 60px;
+		padding-left:0px;
+	}
+
+	header #carrito{
+		padding-left:100px;
+	}
+
+}
+
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px){
+
+	/*=============================================
+	HEADER
+	=============================================*/
+
+	header #logotipo p{
+		padding:25px 60px;
+		padding-left:0px;
+	}
+
+	header #carrito{
+		padding-left:70px;
+	}
+
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px){
+
+	/*=============================================
+	HEADER
+	=============================================*/
+
+	header #logotipo p{
+		padding:30px 0px;
+	}
+
+	header #carrito{
+		padding-left:55px;
+	}
+
+	header #carrito p{
+		display:none;
+	}
+
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+
+@media (max-width:767px){
+
+	/*=============================================
+	TOP
+	=============================================*/
+
+	#top ul{
+		text-align: center;
+	}
+
+	#top #registro{
+		border-top:1px solid #222;
+	}
+	
+	/*=============================================
+	HEADER
+	=============================================*/
+
+	header #logotipo p{
+		padding:30px;
+		padding-bottom:10px;
+	}
+
+	header #categorias{
+		margin-bottom:10px;
+	}
+
+	header #buscador{
+		margin-bottom:10px;
+	}
+
+	header #carrito{
+		margin:0px;
+	}
+	
+}
+
